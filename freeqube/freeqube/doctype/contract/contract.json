@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{CNT}-{###}",
+ "creation": "2025-05-17 15:42:42.790545",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_post",
+  "project_type",
+  "proposal",
+  "column_break_xzek",
+  "client",
+  "freelancer",
+  "contract_payment_details_section",
+  "total_amount",
+  "column_break_ydmp",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "project_post.client",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "User"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "project_post",
+   "fieldtype": "Link",
+   "label": "Project Post",
+   "options": "Project Posts"
+  },
+  {
+   "fieldname": "proposal",
+   "fieldtype": "Link",
+   "label": "Proposal",
+   "options": "Proposal"
+  },
+  {
+   "fieldname": "column_break_xzek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "freelancer",
+   "fieldtype": "Link",
+   "label": "Freelancer",
+   "options": "User"
+  },
+  {
+   "fieldname": "contract_payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Payment Details"
+  },
+  {
+   "fieldname": "column_break_ydmp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nCompleted\nCancelled"
+  },
+  {
+   "fetch_from": "project_post.project_type",
+   "fieldname": "project_type",
+   "fieldtype": "Data",
+   "label": "Project Type"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Contract",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-26 10:45:03.004911",
+ "modified_by": "Administrator",
+ "module": "freeqube",
+ "name": "Contract",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

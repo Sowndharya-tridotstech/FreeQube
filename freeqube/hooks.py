@@ -28,6 +28,11 @@ app_license = "mit"
 # app_include_css = "/assets/freeqube/css/freeqube.css"
 # app_include_js = "/assets/freeqube/js/freeqube.js"
 
+app_include_js = [
+    "https://checkout.razorpay.com/v1/checkout.js"
+]
+
+
 # include js, css files in header of web template
 # web_include_css = "/assets/freeqube/css/freeqube.css"
 # web_include_js = "/assets/freeqube/js/freeqube.js"
@@ -38,6 +43,13 @@ app_license = "mit"
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}
+
+
+#FREEQUBE WEBFORM SETTING -(not work)
+webform_include_js = {
+    "proposal-submission": "/assets/freeqube/js/proposal_webform.js"
+}
+
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
@@ -145,6 +157,30 @@ app_license = "mit"
 # 	}
 # }
 
+
+# doc_events = {
+#     "Milestone": {
+#         "on_update": "freeqube.freeqube.doctype.milestone.milestone.on_update"
+#     },
+#     "Proposal": {
+#         "validate": "freeqube.freeqube.doctype.proposal.proposal.validate",
+#         "before_insert": "freeqube.freeqube.doctype.proposal.proposal.before_insert"
+#     },
+#     "Contract": {
+#         "before_insert": "freeqube.freeqube.doctype.contract.contract.before_insert"
+#     },
+#     "Feedback": {
+#         "validate": "freeqube.freeqube.doctype.feedback.feedback.validate"
+#     }
+# }
+
+# doc_events = {
+#     "Proposal": {
+#         "on_submit": "freeqube.freeqube.events.notify_client_on_submit"
+#     }
+# }
+
+
 # Scheduled Tasks
 # ---------------
 
@@ -192,7 +228,7 @@ app_license = "mit"
 # Ignore links to specified DocTypes when deleting documents
 # -----------------------------------------------------------
 
-# ignore_links_on_delete = ["Communication", "ToDo"]
+ignore_links_on_delete = ["Proposal", "Contract"]
 
 # Request Events
 # ----------------

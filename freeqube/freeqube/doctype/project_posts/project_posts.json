@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{PJT}-{###}",
+ "creation": "2025-05-17 15:23:30.284242",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "project_title",
+  "project_type",
+  "budget",
+  "column_break_sbfz",
+  "skills",
+  "status",
+  "deadline",
+  "project_poster",
+  "section_break_sfdv",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_sbfz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "budget",
+   "fieldtype": "Currency",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Table MultiSelect",
+   "label": "Skills",
+   "options": "Project Skill"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nHired\nClosed"
+  },
+  {
+   "fieldname": "deadline",
+   "fieldtype": "Date",
+   "label": "Deadline"
+  },
+  {
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "label": "Project Title"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "\nFront End Development\nBack End Development\nFull Stack Develpment\nMobile App Development"
+  },
+  {
+   "fieldname": "section_break_sfdv",
+   "fieldtype": "Section Break",
+   "label": "Project Description"
+  },
+  {
+   "fieldname": "project_poster",
+   "fieldtype": "Attach Image",
+   "label": "Project Poster"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "project_poster",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-23 17:19:19.981701",
+ "modified_by": "Administrator",
+ "module": "freeqube",
+ "name": "Project Posts",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

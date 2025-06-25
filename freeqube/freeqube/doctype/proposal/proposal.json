@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{PSL}-{###}",
+ "creation": "2025-05-17 15:35:28.622335",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "amended_from",
+  "client",
+  "project",
+  "freelancer",
+  "freelancer_name",
+  "project_type",
+  "column_break_aivx",
+  "amount",
+  "delivery_time",
+  "status",
+  "contract_created",
+  "contract",
+  "experience_section",
+  "cover_letter"
+ ],
+ "fields": [
+  {
+   "fieldname": "freelancer",
+   "fieldtype": "Link",
+   "label": "Freelancer",
+   "options": "User"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project Posts"
+  },
+  {
+   "fetch_from": "project.deadline",
+   "fieldname": "delivery_time",
+   "fieldtype": "Date",
+   "label": "Delivery Time"
+  },
+  {
+   "fieldname": "column_break_aivx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cover_letter",
+   "fieldtype": "Text",
+   "label": "Cover Letter"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nSubmitted\nAccepted\nRejected\nPending"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Proposal",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "project.budget",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "experience_section",
+   "fieldtype": "Section Break",
+   "label": "Experience"
+  },
+  {
+   "fetch_from": "project.client",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "contract_created",
+   "fieldtype": "Check",
+   "label": "Contract Created"
+  },
+  {
+   "fetch_from": "freelancer.full_name",
+   "fieldname": "freelancer_name",
+   "fieldtype": "Data",
+   "label": "Freelancer Name"
+  },
+  {
+   "fetch_from": "project.project_type",
+   "fieldname": "project_type",
+   "fieldtype": "Data",
+   "label": "Project Type"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-26 11:53:45.857351",
+ "modified_by": "Administrator",
+ "module": "freeqube",
+ "name": "Proposal",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
