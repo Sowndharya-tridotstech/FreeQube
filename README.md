@@ -1,6 +1,9 @@
 ### freeqube
 
 freelancer platform
+I built FreeQube using the Frappe framework to connect clients and freelancers in a structured and trackable way. In this system, clients can post projects, and freelancers can browse these projects and submit proposals. Once a client reviews and accepts a proposal, a contract is created between both parties. Based on the contract, tasks are automatically generated. Freelancers work on these tasks, and payments are made per task after client review.
+
+The platform is designed to support transparency, accountability, and milestone-based progress tracking throughout the project lifecycle.
 
 ### Installation
 
